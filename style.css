@@ -1,0 +1,1578 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+:root {
+  --dark-green: #2e7d32;
+  --leaf-green: #4caf50;
+  --cream: #f5f5f0;
+  --warning-red: #b71c1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  background-color: var(--cream);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Fixed Slim Header */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  height: 65px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.logo img {
+  max-height: 45px;
+}
+.header-title h1 {
+  font-size: 1.1rem;
+  color: var(--dark-green);
+}
+.call-btn {
+  background: var(--leaf-green);
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Layout Spacing */
+.content-area {
+  margin-top: 65px;
+  margin-bottom: 75px;
+}
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Products & 3D Button */
+.products-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.btn-container {
+  margin: 20px 0 40px;
+}
+.btn-3d {
+  display: inline-block;
+  background-color: var(--leaf-green);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 0 #2e7d32;
+  transition: 0.1s;
+}
+.btn-3d:active {
+  box-shadow: 0 2px 0 #2e7d32;
+  transform: translateY(4px);
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.product-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  border-bottom: 4px solid var(--leaf-green);
+}
+
+/* Awareness Section */
+.awareness-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #fff;
+  border-top: 5px solid var(--dark-green);
+}
+.warning-heading {
+  color: var(--warning-red);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+.video-block {
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.loop-gif {
+  width: 100%;
+  display: block;
+}
+
+/* --- NEW: Surgery Risk Section Styling --- */
+.surgery-risk-section {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.risk-title {
+  color: var(--warning-red);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.risk-intro {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+/* The Solution Box */
+.solution-box {
+  background-color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  gap: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+.box-image {
+  flex: 1;
+}
+.box-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+.box-content {
+  flex: 2;
+  text-align: left;
+  font-size: 1.15rem;
+  color: #333;
+}
+
+.box-content strong {
+  color: var(--dark-green);
+  font-size: 1.3rem;
+}
+
+/* Fixed Footer */
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--transparent);
+  padding: 12px;
+  text-align: center;
+  z-index: 1000;
+}
+.footer-buy-btn {
+  background: #fff;
+  color: var(--dark-green);
+  text-decoration: none;
+  padding: 10px 30px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .solution-box {
+    flex-direction: column; /* Stacks image and text */
+    padding: 20px;
+  }
+  .box-content {
+    text-align: center;
+  }
+  .risk-title {
+    font-size: 1.6rem;
+  }
+  .risk-intro {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+/* --- Trust Factors Section Styling --- */
+.trust-section {
+  padding: 60px 20px;
+  background-color: var(--cream); /* आपने डार्क बैकग्राउंड के लिए मना किया था */
+  text-align: center;
+}
+
+.section-title-gold {
+  color: var(--dark-green);
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.trust-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Desktop: 3 columns */
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  border: 2px solid var(--dark-green);
+  padding: 30px;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.trust-icon {
+  background: var(
+    --warning-red
+  ); /* आइकॉन के पीछे लाल रंग जैसा कि फोटो में है */
+  color: white;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.trust-item span {
+  font-weight: 700;
+  color: #333;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.trust-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.trust-heading {
+  color: var(--dark-green);
+  font-size: 1.8rem;
+  margin: 30px 0 15px 0;
+  font-weight: 800;
+}
+
+.trust-content p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* 3D Button - Gold Version */
+.gold-btn {
+  background-color: #fbc02d !important; /* Golden/Yellow color */
+  color: #000 !important;
+  box-shadow: 0 8px 0 #c49000 !important;
+}
+
+.gold-btn:active {
+  box-shadow: 0 2px 0 #c49000 !important;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+  .trust-grid-container {
+    grid-template-columns: 1fr 1fr; /* मोबाइल पर 2 कॉलम जैसा आपने माँगा था */
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .trust-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .trust-item span {
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  .section-title-gold {
+    font-size: 2rem;
+  }
+}
+
+/* --- How It Works Section (Premium Dark Theme) --- */
+.how-it-works-section {
+  padding: 60px 20px;
+  background: linear-gradient(
+    180deg,
+    #111 0%,
+    #222 100%
+  ); /* Elegant Dark Background */
+  text-align: center;
+  overflow: hidden;
+}
+
+.work-title {
+  color: #4df3ce; /* Modern Mint Green for Heading */
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.work-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.work-card {
+  background: #fff0f3; /* Soft Pinkish Background as per image */
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.work-card:hover {
+  transform: scale(1.02);
+}
+
+.work-icon-box {
+  background-color: #ff4d4d; /* Bright Red Icon Circle */
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(255, 77, 77, 0.3);
+}
+
+.work-text h4 {
+  color: #000;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.work-text p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* --- Scroll Animation Classes --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile: Ensuring single column as requested */
+@media (max-width: 600px) {
+  .work-card {
+    padding: 15px;
+    gap: 15px;
+  }
+  .work-icon-box {
+    min-width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  .work-text h4 {
+    font-size: 1.2rem;
+  }
+  .work-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Middle Image Styling */
+.middle-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.middle-prod-img {
+  width: 100%;
+  max-width: 400px; /* डेस्कटॉप पर साइज कंट्रोल करने के लिए */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* फोटो को उभारने के लिए शैडो */
+  border: 3px solid #4df3ce; /* हेडिंग वाले रंग का बॉर्डर */
+}
+
+/* मोबाइल के लिए एडजस्टमेंट */
+@media (max-width: 600px) {
+  .middle-prod-img {
+    max-width: 90% !important; /* मोबाइल पर फोटो थोड़ी छोटी और साफ़ दिखेगी */
+  }
+}
+
+/* --- Middle Image Styling --- */
+.middle-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.middle-prod-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  border: 3px solid #4df3ce;
+}
+
+/* --- Final Red 3D Button --- */
+.final-order-container {
+  margin-top: 50px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.red-btn {
+  background-color: #d32f2f !important; /* गहरा लाल रंग */
+  color: white !important;
+  font-size: 1.5rem !important;
+  padding: 18px 50px !important;
+  box-shadow: 0 8px 0 #8b0000, 0 15px 20px rgba(0, 0, 0, 0.4) !important;
+  border-radius: 50px !important;
+  text-decoration: none;
+  font-weight: 800;
+  transition: all 0.1s ease;
+  display: inline-block;
+}
+
+.red-btn:active {
+  box-shadow: 0 2px 0 #8b0000 !important;
+  transform: translateY(6px);
+}
+
+.red-btn:hover {
+  background-color: #ff1744 !important; /* होवर करने पर थोड़ा चमकीला लाल */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+  .middle-prod-img {
+    max-width: 85%;
+  }
+  .red-btn {
+    font-size: 1.2rem !important;
+    padding: 15px 40px !important;
+  }
+}
+
+/* --- Comparison Section Styling --- */
+.comparison-section {
+  padding: 60px 20px;
+  background-color: var(--cream);
+  text-align: center;
+}
+
+.comparison-title {
+  color: var(--dark-green);
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 Columns as requested */
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.comp-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Label Styling (Curved Box) */
+.label {
+  display: inline-block;
+  padding: 5px 25px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.before-label {
+  background-color: #ff4d4d;
+} /* Red for Before */
+.after-label {
+  background-color: #2ecc71;
+} /* Green for After */
+
+.comp-stats {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Image Placeholders */
+.img-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3; /* Square-ish Rectangle */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.red-placeholder {
+  background-color: #ffebee;
+  color: #ff4d4d;
+  border: 2px dashed #ff4d4d;
+}
+.green-placeholder {
+  background-color: #e8f5e9;
+  color: #2ecc71;
+  border: 2px dashed #2ecc71;
+}
+/* मोबाइल के लिए विशेष सेटिंग */
+@media (max-width: 480px) {
+    .comparison-grid {
+        display: grid;
+        /* यह मोबाइल पर भी जबरदस्ती 2 कॉलम रखेगा */
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 8px; /* बॉक्स के बीच की दूरी कम करें */
+        padding: 5px;
+    }
+
+    .comparison-box {
+        padding: 10px 5px; /* अंदर की जगह कम करें ताकि कंटेंट फिट हो */
+    }
+
+    .comparison-box h3 {
+        font-size: 0.9rem; /* हेडिंग का साइज़ छोटा करें */
+        margin-bottom: 5px;
+    }
+
+    .comparison-box p, .comparison-box li {
+        font-size: 0.75rem; /* टेक्स्ट का साइज़ छोटा करें ताकि वह फैले नहीं */
+        line-height: 1.2;
+    }
+    
+    .comparison-icon {
+        font-size: 1.2rem; /* आइकॉन को भी थोड़ा छोटा करें */
+    }
+}
+
+/* --- Final Confidence Section Styling --- */
+.confidence-section {
+  padding: 40px 15px;
+  background-color: var(--cream);
+}
+
+.yellow-trust-box {
+  background-color: #fdd835; /* Bright Yellow as in image */
+  border-radius: 30px;
+  padding: 30px 20px;
+  max-width: 600px; /* Mobile-friendly width */
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 2px solid #e1b100;
+}
+
+.trust-main-heading {
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.trust-para {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+/* Black Curved Label */
+.black-label-container {
+  margin-bottom: 20px;
+}
+.black-curved-label {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: 800;
+  display: inline-block;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+/* Image Wrapper */
+.trust-image-wrapper {
+  margin: 20px -20px; /* Negative margin to make it full width inside box */
+}
+.full-width-trust-img {
+  width: 100%;
+  display: block;
+}
+
+/* White Curved Heading */
+.white-label-container {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+.white-curved-heading {
+  background-color: #fff;
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trust-footer-para {
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 480px) {
+  .trust-main-heading {
+    font-size: 1.5rem;
+  }
+  .white-curved-heading {
+    font-size: 1.3rem;
+  }
+  .black-curved-label {
+    font-size: 0.9rem;
+  }
+  .yellow-trust-box {
+    padding: 20px 15px;
+  }
+}
+
+/* --- Special Guarantee Section (Dark Theme) --- */
+.special-guarantee-section {
+  padding: 60px 20px;
+  background-color: #000; /* शुद्ध गहरा काला बैकग्राउंड */
+  text-align: center;
+  color: #fff;
+  border-top: 2px solid #d4af37; /* गोल्डन बॉर्डर */
+}
+
+.gold-text-heading {
+  color: #d4af37; /* गोल्डन रंग */
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.white-text-desc {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.guarantee-main-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+
+.guarantee-image-container {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.main-guarantee-img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3); /* गोल्डन ग्लो */
+}
+
+/* Floating Seals Style */
+.seals-overlay {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.seal-item {
+  background: linear-gradient(145deg, #d4af37, #b8860b);
+  color: #000;
+  padding: 10px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5rem;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border: 2px solid #fff;
+}
+
+.seal-item i {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .gold-text-heading {
+    font-size: 1.8rem;
+  }
+  .guarantee-main-title {
+    font-size: 1.5rem;
+  }
+  .seals-overlay {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .seal-item {
+    width: 60px;
+    height: 60px;
+    font-size: 0.45rem;
+  }
+}
+
+/* --- Product Section Styling --- */
+.product-selection-section {
+  padding: 60px 20px;
+  background-color: var(--cream); /* Cream Background */
+}
+
+.product-title-main {
+  text-align: center;
+  color: var(--dark-green); /* Dark Green Heading */
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-weight: 800;
+}
+
+.product-flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: #fff;
+  border: 2px solid var(--dark-green);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-img-box {
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.product-img-box img {
+  max-width: 250px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img-box img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 30px;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 1.6rem;
+  color: var(--dark-green);
+  margin-bottom: 10px;
+}
+
+.product-short-desc {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.price-box {
+  margin-bottom: 20px;
+}
+
+.current-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: black; /* Red for price to catch eye */
+}
+
+/* Quantity Selector Styles */
+.quantity-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.qty-btn {
+  background-color: var(--dark-green);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.qty-btn:hover {
+  background-color: #1a4a35;
+}
+
+.qty-input {
+  width: 60px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+/* Buy Now Button Styles */
+.buy-now-btn {
+  display: inline-block;
+  background-color: var(--dark-green);
+  color: white;
+  padding: 15px 50px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 0 #1a4a35;
+  transition: all 0.1s;
+  margin-bottom: 25px;
+}
+
+.buy-now-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0 #1a4a35;
+}
+
+.long-desc-box {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.category-tag {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .product-name {
+    font-size: 1.3rem;
+  }
+  .current-price {
+    font-size: 1.7rem;
+  }
+}
+
+/* --- Disclaimer Section Styling --- */
+.disclaimer-section {
+  padding: 40px 20px;
+  background-color: #fcfbf4; /* आपकी वेबसाइट की क्रीम थीम */
+  display: flex;
+  justify-content: center;
+}
+
+.disclaimer-3d-box {
+  background-color: #ffffff;
+  max-width: 900px;
+  padding: 25px 30px;
+  border-radius: 15px;
+  text-align: center;
+  /* 3D Box Shadow Effect */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+    0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.disclaimer-text {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.disclaimer-text strong {
+  color: #000;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .disclaimer-3d-box {
+    padding: 20px;
+  }
+  .disclaimer-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Footer Styling --- */
+.main-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 0 0 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  padding: 0 20px 40px 20px;
+}
+
+.footer-col h3 {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-col h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #d4af37; /* Golden Line */
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.company-desc {
+  color: #bbb;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+.contact-info i {
+  color: #d4af37;
+  margin-right: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Recent Posts Mini Style */
+.footer-post {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-post img {
+  border-radius: 5px;
+}
+
+.footer-post a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  display: block;
+  line-height: 1.3;
+}
+
+.footer-post span {
+  color: #777;
+  font-size: 0.75rem;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  background-color: #080808;
+  padding: 20px;
+  border-top: 1px solid #222;
+}
+
+.bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-bottom p {
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.payment-icons {
+  font-size: 1.5rem;
+  color: #555;
+  display: flex;
+  gap: 15px;
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 1000;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .bottom-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* --- Fixed Footer Container --- */
+.fixed-order-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent; /* White background as requested */
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15);
+  z-index: 9999; /* ताकी यह सबसे ऊपर रहे */
+}
+
+/* --- Animated Red Order Button --- */
+.zoom-order-btn {
+  background-color: #d32f2f; /* Red Color */
+  color: #ffffff !important; /* White Text */
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 800;
+  padding: 12px 60px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 6px 0 #8b0000, 0 10px 20px rgba(211, 47, 47, 0.4);
+  text-align: center;
+  width: 90%; /* मोबाइल पर अच्छी चौड़ाई के लिए */
+  max-width: 400px;
+  animation: zoomInOut 1.5s infinite ease-in-out; /* Zoom Animation */
+  transition: all 0.2s ease;
+}
+
+/* --- Zoom In-Out Animation Keyframes --- */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08); /* 8% Zoom in */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* बटन दबाने पर इफ़ेक्ट */
+.zoom-order-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 0 #8b0000;
+}
+
+/* मोबाइल स्क्रीन के लिए छोटे एडजस्टमेंट */
+@media (max-width: 480px) {
+  .zoom-order-btn {
+    font-size: 1.2rem;
+    padding: 10px 40px;
+  }
+}
+
+/* =========================================
+   SCROLL ANIMATION CLASSES (GLOBAL)
+========================================= */
+
+/* 1. Fade Up (नीचे से ऊपर) - Default */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+/* 2. Zoom In (छोटा से बड़ा) */
+.reveal-zoom {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+/* 3. Fade Left (बाएँ से दाएँ) */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+/* 4. Fade Right (दाएँ से बाएँ) */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+/* === ACTIVE STATE (जब स्क्रॉल करने पर एलिमेंट स्क्रीन पर आता है) === */
+.reveal.active,
+.reveal-zoom.active,
+.reveal-left.active,
+.reveal-right.active {
+  opacity: 1;
+  transform: translateY(0) scale(1) translateX(0);
+}
+
+/* Delay Classes (अगर आप चाहते हैं कि कुछ चीजें थोड़ी देर से आएँ) */
+.delay-100 {
+  transition-delay: 0.1s;
+}
+.delay-200 {
+  transition-delay: 0.2s;
+}
+.delay-300 {
+  transition-delay: 0.3s;
+}
+
+
+
+
+
+
+/* --- Our Roots Section Styling --- */
+.roots-section {
+    padding: 60px 20px;
+    background-color: #fcfbf4; /* मुख्य क्रीम थीम */
+    text-align: center;
+}
+
+.roots-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* मुख्य बड़ा बॉक्स */
+.roots-main-box {
+    border: 1px solid #7a6859; /* इमेज के जैसा पतला भूरा बॉर्डर */
+    padding: 40px 30px;
+    border-radius: 8px; /* Slightly Rounded */
+    background-color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.roots-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.roots-paragraph {
+    font-size: 1.05rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* 4 बॉक्स वाली ग्रिड */
+.roots-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.roots-card {
+    border: 1px solid #7a6859;
+    padding: 30px 15px;
+    background-color: #ffffff;
+    border-radius: 8px; /* Slightly Rounded */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.roots-icon {
+    font-size: 2.5rem;
+    color: #6d4c41; /* भूरा आइकॉन रंग */
+    margin-bottom: 20px;
+}
+
+.roots-card-title {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.4;
+    font-family: 'Playfair Display', serif;
+}
+
+/* मोबाइल के लिए बदलाव */
+@media (max-width: 992px) {
+    .roots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .roots-grid {
+        grid-template-columns: 1fr;
+    }
+    .roots-heading {
+        font-size: 1.8rem;
+    }
+
+  
+  /* मोबाइल के लिए विशेष सेटिंग */
+@media (max-width: 480px) {
+    .comparison-grid {
+        display: grid;
+        /* यह मोबाइल पर भी जबरदस्ती 2 कॉलम रखेगा */
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 8px; /* बॉक्स के बीच की दूरी कम करें */
+        padding: 5px;
+    }
+
+    .comp-card {
+        padding: 10px 5px; /* अंदर की जगह कम करें ताकि कंटेंट फिट हो */
+    }
+
+    .comp-card p {
+        font-size: 0.9rem; /* हेडिंग का साइज़ छोटा करें */
+        margin-bottom: 5px;
+    }
+
+    .comp-card p, .comp-card p {
+        font-size: 0.75rem; /* टेक्स्ट का साइज़ छोटा करें ताकि वह फैले नहीं */
+        line-height: 1.2;
+    }
+    
+    .comparison-icon {
+        font-size: 1.2rem; /* आइकॉन को भी थोड़ा छोटा करें */
+   
+  }
+}
+
+  
+  
+  
+  @media (max-width: 600px) { /* 480px की जगह 600px कर दिया ताकि थोड़ी बड़ी स्क्रीन पर भी काम करे */
+    .comparison-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+}
+  
+  
+  /* --- Updated Comparison Section (Only) --- */
+.comparison-section {
+  padding: 60px 20px;
+  background-color: var(--cream);
+  text-align: center;
+}
+
+.comparison-title {
+  color: var(--dark-green);
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.comp-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.label {
+  display: inline-block;
+  padding: 5px 25px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.before-label { background-color: #ff4d4d; }
+.after-label { background-color: #2ecc71; }
+
+.comp-stats {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* =========================================
+   COMPARISON SECTION (UPDATED FOR EXACT IMAGE SIZES)
+   ========================================= */
+.comparison-section {
+  padding: 60px 20px;
+  background-color: var(--cream);
+  text-align: center;
+}
+
+.comparison-title {
+  color: var(--dark-green);
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* कार्ड्स को बराबर लॉक करने के लिए Flexbox जोड़ा गया है */
+.comp-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: left;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: inline-block;
+  padding: 5px 25px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.before-label { background-color: #ff4d4d; }
+.after-label { background-color: #2ecc71; }
+
+.comp-stats {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* डेस्कटॉप पर दोनों इमेजेज को बिल्कुल एक साइज़ का बनाने के लिए Fixed Height */
+.img-placeholder {
+  width: 100%;
+  height: 280px; /* डेस्कटॉप के लिए फिक्स हाइट */
+  border-radius: 20px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* यह फोटो को खींचे बिना बॉक्स में पूरी तरह फिट कर देगा */
+  border-radius: 20px;
+}
+
+.red-placeholder {
+  background-color: #ffebee;
+  color: #ff4d4d;
+  border: 2px solid #ff4d4d;
+}
+
+.green-placeholder {
+  background-color: #e8f5e9;
+  color: #2ecc71;
+  border: 2px solid #2ecc71;
+}
+
+/* मोबाइल व्यू के लिए इमेजेज की हाइट एडजस्ट करना */
+@media (max-width: 600px) {
+    .comparison-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    .comp-card {
+        padding: 10px 5px;
+    }
+    .img-placeholder {
+        height: 150px; /* मोबाइल पर दोनों इमेजेज इस हाइट की दिखेंगी */
+    }
+    .comp-stats {
+        font-size: 0.85rem;
+    }
+}
