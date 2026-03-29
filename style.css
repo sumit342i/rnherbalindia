@@ -1405,3 +1405,59 @@ body {
         max-width: 200px;
     }
 }
+
+
+
+/* whatsapp floating btn  */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* btn 1 (bigger)  */
+
+.btn1 {
+  bottom: 0px;
+  right: 0px;
+}
+
+.btn1 img {
+  width: 100px;
+  height: 100px;
+}
+
+/* btn 2 (smaller)  */
+
+.btn2 {
+  bottom: 65px;
+  right: 8px;
+}
+
+.btn2 img {
+  width: 85px;
+  height: 85px;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
